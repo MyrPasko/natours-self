@@ -1,4 +1,4 @@
-
+const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config({
     path: './config.env'
@@ -15,12 +15,6 @@ mongoose.connect(DB, {
 })
     .then(() => console.log('[DB connection is successful]'))
     .catch((e) => console.log('[ERROR]', e));
-
-const  [] = new Tour({
-    name: 'The Park Camper',
-    rating: 4.6,
-    price: 497
-})
 
 const port = process.env.PORT || 8000;
 // SERVER

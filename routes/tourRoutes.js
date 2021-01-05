@@ -5,19 +5,17 @@ const {
     getOneTour,
     updateOneTour,
     deleteOneTour,
-    checkID,
-    checkBody
 } = require('./../controllers/tourController');
 
 const router = express.Router();
 
 // This middleware called if there is "id" parameter in the route only.
-router.param('id', checkID);
+// router.param('id', checkID);
 
 router
     .route('/')
     .get(getAllTours)
-    .post(checkBody, createOneTour);
+    .post(createOneTour);
 
 router
     .route('/:id')
